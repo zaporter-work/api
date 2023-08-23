@@ -822,8 +822,6 @@ enum Visibility {
 message UpdateModuleRequest {
   // The id of the module being updated, containing module name or namespace and module name
   string module_id = 1;
-  // The organization of the module being updated, required if no namespace exists in the module_id
-  optional string organization_id = 7;
   // The visibility that should be set for the module
   Visibility visibility = 2;
   // The url to reference for documentation, code, etc.
@@ -851,8 +849,6 @@ message Model {
 message ModuleFileInfo {
   // The id of the module being uploaded, containing module name or namespace and module name
   string module_id = 1;
-  // The organization of the module being updated, required if no namespace exists in the module_id
-  optional string organization_id = 4;
   // The semver string that represents the new major/minor/patch version of the module
   string version = 2;
   // The platform that the file is built to run on
@@ -876,8 +872,6 @@ message UploadModuleFileResponse {
 message GetModuleRequest {
   // The id of the module being retrieved, containing module name or namespace and module name
   string module_id = 1;
-  // The organization of the module being updated, required if no namespace exists in the module_id
-  optional string organization_id = 2;
 }
 
 message GetModuleResponse {
