@@ -44,8 +44,8 @@ message GetLogsResponse {
 
 enum JobStatus {
   JOB_STATUS_UNSPECIFIED = 0;
-  // STARTED = in the database, being queued / prepared for execution
-  JOB_STATUS_STARTED = 1;
+  // QUEUED = in the database, being queued / prepared for execution
+  JOB_STATUS_QUEUED = 1;
   // IN_PROGRESS = executing on cloud infra. Artifact has not been uploaded
   JOB_STATUS_IN_PROGRESS = 2;
   JOB_STATUS_FAILED = 3;
